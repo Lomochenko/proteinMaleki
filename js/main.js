@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
     var bsCollapse = new bootstrap.Collapse(menuCollapse, {
         toggle: false
     });
-        //close menu when a link is clicked fo example
+    //close menu when a link is clicked fo example
     [].forEach.call(document.querySelectorAll('#navbarMenuCollapse a:not(.dropdown-toggle)'), function (el) {
         el.addEventListener('click', function (event) {
             bsCollapse.hide();
@@ -132,7 +132,7 @@ window.addEventListener('load', function () {
         // Section Scroller
         var sectionScroller = new SectionScroll('.sections-scroll ', {
             sectionClass: 'section',
-            navDotContainer :'.nav-dot-menu',
+            navDotContainer: '.nav-dot-menu',
             changeOnSectionColor: '.change-on-section-color, .nav-dot-menu .nav-link'
         });
         sectionScroller.init();
@@ -164,7 +164,7 @@ window.addEventListener('load', function () {
         console.log('scroll-anim not available')
     }
 
-    
+
 
     //8. Custom Scroll parallax
     var parallaxElements = document.querySelectorAll('[data-prl]');
@@ -198,10 +198,10 @@ window.addEventListener('load', function () {
         let refHeight = 0.25 * vh
         let sMax = 1;
 
-        let scaleValue = 0.5 *sMax * distance * scaleCoeff + 1
+        let scaleValue = 0.5 * sMax * distance * scaleCoeff + 1
         let translateX = speedX ? `translateX(${distance * speedX * refWidth}px)` : ''
         let translateY = speedY ? `translateY(${distance * speedY * refHeight}px)` : ''
-        let scale = scaleCoeff ? `scale(${scaleValue })` : ''
+        let scale = scaleCoeff ? `scale(${scaleValue})` : ''
 
         element.style.transform = `${translateY} ${translateX}  ${scale}`
     }
@@ -231,4 +231,22 @@ window.addEventListener('load', function () {
     }
     document.body.classList.add('page-loaded');
 
+    // 10. plus the value of input(basket.html)
+    document.getElementById('plus').addEventListener('click', function () {
+        const input = document.getElementById('weight');
+        const step = parseFloat(input.getAttribute('step'));
+        const currentValue = parseFloat(input.value);
+        input.value = (currentValue + step); // تغییر مقدار به اندازه step
+    });
+
+    // 11. minus the value of input(basket.html)
+    // 10. plus the value of input(basket.html)
+    document.getElementById('minus').addEventListener('click', function () {
+        const input = document.getElementById('weight');
+        const step = parseFloat(input.getAttribute('step'));
+        const currentValue = parseFloat(input.value);
+        if (currentValue != 0) {
+            input.value = (currentValue - step); // تغییر مقدار به اندازه step
+        }
+    });
 });

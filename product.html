@@ -236,8 +236,19 @@
                                             <form action="#" method="#" class="form-floating mt-2 phone-w mx-auto">
                                                 <!-- <label for="weight">(KG)</label> -->
                                                 <div class="input-group">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <!-- plus icon -->
+                                                        <span id="plus" class="text-light ms-2">
+                                                            <i class="fa fa-plus-circle fs-4"></i>
+                                                        </span>
+                                                        <!-- minus icon -->
+                                                        <span id="minus" class="text-light ms-2">
+                                                            <i class="fa fa-minus-circle fs-4"></i>
+                                                        </span>
+                                                    </div>
                                                     <input type="number" name="weight" id="weight" min="0.5" max="1000"
-                                                        step="0.5" placeholder="KG" class="form-control fs-5">
+                                                        step="0.5" value="0.5" placeholder="KG"
+                                                        class="form-control fs-5">
                                                     <input type="submit"
                                                         class="input-group-text bg-success text-light fs-5"
                                                         value="ثبت سفارش">
