@@ -1420,14 +1420,14 @@ h2 .strong {
 }
 
 .navbar-a.hide-header {
-  transform: translateY(-100%);
+  transform: translateY(-200%);
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .navbar-a.hide-header {
     transform: none;
   }
-}
+} */
 
 body.menu-visible .navbar-a.hide-header {
   transform: none;
