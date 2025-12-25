@@ -10,7 +10,7 @@ This repository contains the **frontend implementation only**. The backend (Djan
 
 Explore the fully integrated web application here:
 
-👉 ## https://proteinmaleki.com/en/
+👉 https://proteinmaleki.com/en/
 
 This site is the production deployment of the project, featuring product listings, ordering workflow, user login, and dashboard functionalities powered by a secure backend not included in this repo.
 
